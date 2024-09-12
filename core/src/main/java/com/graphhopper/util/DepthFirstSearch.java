@@ -28,11 +28,13 @@ import com.graphhopper.coll.GHBitSet;
  */
 public abstract class DepthFirstSearch extends XFirstSearch {
     /**
-     * beginning with startNode add all following nodes to LIFO queue. If node has been already
+     * beginning with startNode add all following nodes to LIFO queue. If node has
+     * been already
      * explored before, skip reexploration.
      */
     @Override
     public void start(EdgeExplorer explorer, int startNode) {
+        System.out.println("ok");
         IntArrayDeque stack = new IntArrayDeque();
 
         GHBitSet explored = createBitSet();
